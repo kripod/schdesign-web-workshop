@@ -230,6 +230,7 @@ console.log(sumOfSquaresOfEven(example));
 
 # TODO
 
+- `let` vs `const`
 - `==` vs `===`
 - Destructing
 - Rest/spread
