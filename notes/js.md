@@ -10,11 +10,11 @@ A JS egy lazán típusos nyelv, ennek következtében bármely változó tetsző
 
 ```js
 let something = 'Hello, World!';
-console.log(something);
+console.log(something); // Hello, World!
 
 // Egy változó bármilyen típusú értéket felvehet
 something = 123;
-console.log(something);
+console.log(something); // 123
 ```
 
 _Ez elsőre szokatlan lehet, azonban így akár az OOP-ben megszokott öröklés használata nélkül is kezelhetünk azonos tulajdonságokkal rendelkező, különböző típusú objektumokat._
@@ -148,7 +148,7 @@ const sumOfSquaresOfEven = (numbers) => {
 }
 
 const example = [1, 1, 2, 3, 5, 8];
-console.log(sumOfSquaresOfEven(example));
+console.log(sumOfSquaresOfEven(example)); // 68
 ```
 
 A feladatot sikerrel megoldottuk, azonban több problémával is szembeütköztünk:
@@ -200,7 +200,7 @@ const sum = (numbers) => {
 const sumOfSquaresOfEven = (numbers) => sum(mapSquare(filterEven(numbers)));
 
 const example = [1, 1, 2, 3, 5, 8];
-console.log(sumOfSquaresOfEven(example));
+console.log(sumOfSquaresOfEven(example)); // 68
 ```
 
 Azonban kódunk mérete ezzel csak nőtt. A fent látható 3 részprobléma megoldására a következő `Array.prototype`-beli függvények állnak rendelkezésünkre:
@@ -225,7 +225,7 @@ const sumOfSquaresOfEven = (numbers) =>
   );
 
 const example = [1, 1, 2, 3, 5, 8];
-console.log(sumOfSquaresOfEven(example));
+console.log(sumOfSquaresOfEven(example)); // 68
 ```
 
 # TODO
