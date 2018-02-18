@@ -4,6 +4,15 @@ A JavaScript (JS) programozási nyelv nagy szerepet játszik a weboldalak intera
 
 ## Változók
 
+### `const`, `let`
+
+Új változó deklarálásához a `const`, illetve a `let` kulcsszó használatos. Mindkét kulcsszó blokk hatáskörű.
+
+- A `const` kulcsszóval deklarált konstansok nem módosíthatóak
+- Csak különösen indokolt esetben szokás a változók módosítását lehetővé tévő `let` kulcsszót használni
+
+Minden változó referenciaként kezelendő. A változók által referált nem primitív típusú értékek (pl. `Object`, `Array`) `const` használata esetén is megváltoztathatók.
+
 ### Típusosság
 
 A JS egy lazán típusos nyelv, ennek következtében bármely változó tetszőleges típusú értéket vehet fel.
@@ -230,7 +239,6 @@ console.log(sumOfSquaresOfEven(example)); // 68
 
 # TODO
 
-- `let` vs `const`
 - `==` vs `===`
 - Destructing
 - Rest/spread
