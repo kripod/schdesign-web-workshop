@@ -102,10 +102,12 @@ JS-ben két fő függvénytípus létezik:
   - Nem különbözik a `this` függvénytörzsbeli értéke a függvényt tartalmazó blokk `this` változójának értékétől
   - Példák:
     ```js
-      const square = (number) => number * number;
+      const add = (a, b) => a + b;
 
-      const add = (a, b) => {
-        return a + b;
+      const fibonacci = (n) => {
+        if (n <= 1) return 1;
+
+        return fibonacci(n - 1) + fibonacci(n - 2);
       }
     ```
 
