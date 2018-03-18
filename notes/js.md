@@ -8,7 +8,7 @@ A JavaScript (JS) programozási nyelv nagy szerepet játszik a weboldalak intera
 
 Új változó deklarálásához a `const`, illetve a `let` kulcsszó használatos. Mindkét kulcsszó blokk hatáskörű.
 
-- A `const` kulcsszóval deklarált konstansok nem módosíthatóak
+- A `const` kulcsszóval deklarált változók konstansok, azaz nem módosíthatóak
 - Csak különösen indokolt esetben szokás a változók módosítását lehetővé tévő `let` kulcsszót használni
 
 Minden változó referenciaként kezelendő. A változók által referált nem primitív típusú értékek (pl. `Object`, `Array`) `const` használata esetén is megváltoztathatók.
@@ -26,7 +26,9 @@ something = 123;
 console.log(something); // 123
 ```
 
-_Ez elsőre szokatlan lehet, azonban így akár az OOP-ben megszokott öröklés használata nélkül is kezelhetünk azonos tulajdonságokkal rendelkező, különböző típusú objektumokat._
+_Ez elsőre szokatlan lehet, azonban így akár az [OOP][]-ben megszokott öröklés használata nélkül is kezelhetünk azonos tulajdonságokkal rendelkező, különböző típusú objektumokat._
+
+[OOP]: https://en.wikipedia.org/wiki/Object-oriented_programming
 
 ### Adattípusok
 
@@ -80,8 +82,8 @@ const person = {
     { institution: 'Áldás Utcai Általános Iskola' },
     { institution: 'Móricz Zsigmond Gimnázium' },
     { institution: 'Budapesti Műszaki és Gazdaságtudományi Egyetem' },
-  ]
-}
+  ],
+};
 ```
 
 ## Függvények
@@ -91,7 +93,7 @@ JS-ben két fő függvénytípus létezik:
 - Function
   - Minden függvény saját `this` értékkel rendelkezik
   - Manapság csak különösen indokolt esetben használatos
-  - Példák:
+  - Példa:
     ```js
       function square(number) {
         return number * number;
@@ -113,7 +115,10 @@ JS-ben két fő függvénytípus létezik:
 
 Ezen függvénytípusoknak léteznek [aszinkron (`async`) változatai][async function] is, azonban jelen segédlet keretein belül ezeket nem tárgyaljuk.
 
+_Érdeklődők számára a `this` kulcsszó használata megismerhető [ezen cikk][this in javascript] elolvasásával._
+
 [async function]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+[this in javascript]: https://zellwk.com/blog/this/
 
 ## Funkcionális JavaScript
 
@@ -238,10 +243,3 @@ const sumOfSquaresOfEven = (numbers) =>
 const example = [1, 1, 2, 3, 5, 8];
 console.log(sumOfSquaresOfEven(example)); // 68
 ```
-
-# TODO
-
-- `==` vs `===`
-- Destructing
-- Rest/spread
-- Prototípusok(?)
