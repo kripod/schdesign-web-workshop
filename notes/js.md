@@ -48,7 +48,11 @@ A primitív típusú értékek nem változtathatók.
 Egy karakterláncot az alábbi módokon lehet leírni:
 
 - `'hello'`, `"world"`
-- ``A mai csúcshőmérséklet ${maxDegree}°C körül várható`` _(template literal, újdonság az ECMAScript 2015-ben)_
+- Template literal _(újdonság az ECMAScript 2015-ben)_:
+  ```js
+  const maxDegree = 42;
+  console.log(`A mai csúcshőmérséklet ${maxDegree}°C körül várható`);
+  ```
 
 #### Object
 
