@@ -123,9 +123,9 @@ Egy átlagos HTML5 dokumentum az alábbiakhoz hasonlóan néz ki:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="hu">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Tesztoldal címe</title>
   </head>
 
