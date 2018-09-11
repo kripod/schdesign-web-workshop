@@ -136,6 +136,41 @@ Egy átlagos HTML5 dokumentum az alábbiakhoz hasonlóan néz ki:
 ```
 
 - `head`: [Metaadatok][] tárolására használatos (pl.: cím (`title`), leírás, keresőszavak, stílusinformációk).
+  - `meta charset`: A dokumentum karakterkészletét jelöli. Érdemes elsőként elhelyezni a fejrészben.
+  - `title`: Az oldal címét tartalmazza, amely megjelenik a böngésző lapjának címeként.
 - `body`: Az oldal lényegi tartalmának hordozója.
 
 [Metaadatok]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
+
+### Szemantikus weboldal struktúra
+
+Az [MDN weblap strukturálási útmutatója][] alapján minden oldal törzsében (`body`) az alábbiakhoz hasonló felépítést javasolt követni:
+
+```
++---------------------------------+
+|              header             |
+| +-----------------------------+ |
+| |             nav             | |
+| +-----------------------------+ |
++---------------------------------+
+
++---------------------------------+
+|               main              |
+| +-------------------+ +-------+ |
+| | article / section | | aside | |
+| +-------------------+ +-------+ |
++---------------------------------+
+
++---------------------------------+
+|              footer             |
++---------------------------------+
+```
+
+- `header`: Az oldal fejléce, melyben elhelyezhető pl. egy logó. Tartalma többnyire állandó, aloldal váltáskor nem szokott jelentősen változni.
+  - `nav`: Navigációs sáv, amely tartalmazza az oldal menüpontjait (általában linkekként vagy esetleg fülekként).
+- `main`: Az aloldalhoz kötődő egyedi tartalom (pl. történet, videó, térkép).
+  - `article`/`section`: Az oldal további tartalmától független egység, amely önmagában is értelmezhető (vagy akár megosztható).
+  - `aside`: Oldalsáv, melyen a fő tartalomtól függő kontextuális információk jeleníthetők meg. Amennyiben nem kizárólagosan az aloldal tartalmához kötődik, a `main` elemen kívül is elhelyezhető.
+- `footer`: Az oldal lábléce. Általában kapcsolati információk találhatók benne, tartalma aloldal váltáskor nem szokott jelentősen változni.
+
+[MDN weblap strukturálási útmutatója]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
