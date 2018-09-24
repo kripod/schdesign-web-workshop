@@ -1,0 +1,54 @@
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 48em;
+  padding: 0 1em;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  padding: 0.5em 1em;
+  align-items: center;
+  flex-wrap: wrap;
+  background: lightgray;
+}
+
+.navbar-brand {
+  flex: 8;
+}
+
+.navbar-brand > a {
+  display: inline-block;
+}
+
+.navbar-brand h1 {
+  margin: 0;
+}
+
+.navbar-nav {
+  flex: 4;
+}
+
+.navbar-nav-items {
+  display: flex;
+  justify-content: space-between;
+  padding: unset;
+  margin: 0.5em 0;
+}
+
+.navbar-nav-items > * {
+  display: block;
+}
+
+.pets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+  grid-gap: 1em;
+}
