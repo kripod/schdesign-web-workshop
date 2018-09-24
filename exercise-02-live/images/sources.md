@@ -1,0 +1,9 @@
+- cat-01.jpg: https://unsplash.com/photos/IbPxGLgJiMI
+- cat-02.jpg: https://unsplash.com/photos/b079C-_tUbM
+- dog-01.jpg: https://unsplash.com/photos/ybHtKz5He9Y
+- dog-02.jpg: https://unsplash.com/photos/v3-zcCWMjgM
+- dog-03.jpg: https://unsplash.com/photos/0nk6XZp7_1E
+- dog-04.jpg: https://unsplash.com/photos/KZv7w34tluA
+- hamster-01.jpg: https://unsplash.com/photos/adK3Vu70DEQ
+- rabbit-01.jpg: https://unsplash.com/photos/5ibPTuqxhdE
+- rabbit-02.jpg: https://unsplash.com/photos/jB47hKBU4KE

@@ -1,0 +1,61 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 48em;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: papayawhip;
+  padding: 0 1em;
+}
+
+.navbar-brand {
+  color: palevioletred;
+  flex: 8;
+}
+
+.navbar-nav {
+  flex: 4;
+}
+
+.navbar-menu-items {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-menu-items > * {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+.pets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1em 2em;
+}
+
+.footer {
+  background: rebeccapurple;
+  color: white;
+}
