@@ -1,54 +1,61 @@
-img {
-  max-width: 100%;
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.container {
-  max-width: 48em;
-  padding: 0 1em;
-  margin: 0 auto;
+main {
+  flex: 1;
 }
 
 .text-center {
   text-align: center;
 }
 
+.container {
+  max-width: 48em;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
 .navbar {
   display: flex;
-  padding: 0.5em 1em;
-  align-items: center;
   flex-wrap: wrap;
-  background: lightgray;
+  align-items: center;
+  background: papayawhip;
+  padding: 0 1em;
 }
 
 .navbar-brand {
+  color: palevioletred;
   flex: 8;
-}
-
-.navbar-brand > a {
-  display: inline-block;
-}
-
-.navbar-brand h1 {
-  margin: 0;
 }
 
 .navbar-nav {
   flex: 4;
 }
 
-.navbar-nav-items {
+.navbar-menu-items {
+  padding: 0;
   display: flex;
   justify-content: space-between;
-  padding: unset;
-  margin: 0.5em 0;
 }
 
-.navbar-nav-items > * {
+.navbar-menu-items > * {
   display: block;
+}
+
+img {
+  max-width: 100%;
 }
 
 .pets-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
-  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1em 2em;
+}
+
+.footer {
+  background: rebeccapurple;
+  color: white;
 }
