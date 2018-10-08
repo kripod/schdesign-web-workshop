@@ -1,17 +1,5 @@
 # Bootstrap
 
-## Témák, színsémák személyre szabása
-
-https://getbootstrap.com/docs/4.1/getting-started/theming/
-
-- CSS változók használata
-
-## Hozzáférhetőség
-
-https://getbootstrap.com/docs/4.1/getting-started/accessibility/
-
-- `sr-only` CSS osztály használata
-
 ## Layout
 
 https://getbootstrap.com/docs/4.1/layout/overview/
@@ -42,6 +30,22 @@ https://getbootstrap.com/docs/4.1/layout/grid/
 
 [flex-grow]: https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow
 
+## Komponensek
+
+https://getbootstrap.com/docs/4.1/components/
+
+## Témák, színsémák személyre szabása
+
+https://getbootstrap.com/docs/4.1/getting-started/theming/
+
+- CSS változók használata
+
+## Hozzáférhetőség
+
+https://getbootstrap.com/docs/4.1/getting-started/accessibility/
+
+- `sr-only` CSS osztály használata
+
 ## Tipográfia
 
 https://getbootstrap.com/docs/4.1/content/typography/
@@ -57,10 +61,6 @@ https://getbootstrap.com/docs/4.1/content/images/
   - Pl. kör alakú avatarokhoz használható a `rounded-circle` CSS osztály
 
 [border-radius]: https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
-
-## Komponensek
-
-https://getbootstrap.com/docs/4.1/components/
 
 ## További segédeszközök
 
