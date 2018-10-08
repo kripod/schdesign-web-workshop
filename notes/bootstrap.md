@@ -61,3 +61,10 @@ https://getbootstrap.com/docs/4.1/content/images/
 ## Komponensek
 
 https://getbootstrap.com/docs/4.1/components/
+
+## További segédeszközök
+
+- [Színek használata](https://getbootstrap.com/docs/4.1/utilities/colors/)
+- [Szövegek stílusának módosítása](http://getbootstrap.com/docs/4.1/utilities/text/)
+- [Elemek közti térközök beállítása](https://getbootstrap.com/docs/4.1/utilities/spacing/)
+- [Árnyékok használata](https://getbootstrap.com/docs/4.1/utilities/shadows/)
