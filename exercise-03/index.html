@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>NyúzoSCH</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">NyúzoSCH</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Navigáció mutatása/elrejtése">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Kezdőlap <span class="sr-only">(jelenlegi)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Technológia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Design</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gazdaság</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Keresés…">
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="jumbotron text-light" style="background: url('images/sunset.jpg') bottom center / cover fixed;">
+      <div class="col-md-6">
+        <h2 class="display-4 font-italic">Egy hosszabb kiemelt hír címe</h2>
+        <p class="lead mt-3 mb-0">Több sornyi szöveg, amely felhívja az olvasó figyelmét az ezen posztban rejlő érdekes tartalomra.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="images/laptops.jpg" alt="Laptopok">
+          <div class="card-body">
+            <div class="font-weight-bold text-primary mb-2">Technológia</div>
+            <h3 class="card-title mb-0">Poszt címe</h3>
+            <time datetime="2018-08-01" class="text-muted">Augusztus 1.</time>
+            <p class="card-text mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quam aspernatur quo quod illum deleniti!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="images/hand.jpg" alt="Kéz">
+          <div class="card-body">
+            <div class="font-weight-bold text-success mb-2">Design</div>
+            <h3 class="card-title mb-0">Poszt címe</h3>
+            <time datetime="2018-07-31" class="text-muted">Július 31.</time>
+            <p class="card-text mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quam aspernatur quo quod illum deleniti!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="images/bitcoin.jpg" alt="Bitcoin">
+          <div class="card-body">
+            <div class="font-weight-bold text-danger mb-2">Gazdaság</div>
+            <h3 class="card-title mb-0">Poszt címe</h3>
+            <time datetime="2018-07-30" class="text-muted">Július 30.</time>
+            <p class="card-text mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quam aspernatur quo quod illum deleniti!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-light mt-4">
+    <div class="container text-center py-3">Ez a <a href="https://getbootstrap.com/">Bootstrap</a> alapú blog <a href="https://twitter.com/mdo">@mdo</a> <a href="https://getbootstrap.com/docs/4.1/examples/blog/">sablonja</a> alapján készült.</div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
