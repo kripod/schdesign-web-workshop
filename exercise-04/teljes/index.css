@@ -1,0 +1,43 @@
+html, body, canvas,#menuBox {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+* {
+    border: 0;
+    margin: 0;
+    text-align: center;
+    color: white;
+    font: 400 8vmin "Raleway", cursive;
+}
+canvas, button {
+    cursor: crosshair;
+    background-color: #a5402d;
+}
+p, button {
+    font-size: 4vmin;
+    margin-top: 4vmin;
+}
+#menuBox {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box, button {
+    width: 33%;
+    border-radius: 4vmin;
+}
+.box {
+    padding: 4vmin;
+    background: rgba(0, 0, 0, 0.5);
+}
+button {
+    width: 60%;
+    padding: 1vmin;
+    cursor: pointer;
+    outline: none;
+}
+#endText {
+    display: none;
+}

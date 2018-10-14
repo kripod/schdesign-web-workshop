@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Játék</title>
+
+    <meta name="theme-color" content="#A5402D">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div id="menuBox">
+        <div class="box">
+            <div id="startText">
+                <h1>Játék neve</h1>
+                <p>A játék hosszú leírása, hogy valamennyire kitöltse a dobozt. Amúgy sok sikert hozzá.</p>
+            </div>
+            <div id="endText">
+                <h1>Játék vége</h1>
+                <p id="endScore"></p>
+            </div>
+            <button id="startButton">Indítás</button>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="CanvasHandler.js"></script>
+    <script src="InputHandler.js"></script>
+    <script src="vec2.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
