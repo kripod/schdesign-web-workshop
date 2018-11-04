@@ -1,0 +1,14 @@
+{
+  // Use ESLint instead of TSLint
+  "tslint.enable": false,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true }
+  ],
+
+  // Enable automatic file formatting and fixing
+  "editor.formatOnSave": true,
+  "eslint.autoFixOnSave": true
+}
