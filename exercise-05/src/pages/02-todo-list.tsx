@@ -1,11 +1,11 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
-import TodoListItem from '../models/TodoListItem';
+import Task from '../models/Task';
 
 interface Props {}
 
 interface State {
-  items: TodoListItem[];
+  items: Task[];
   newItemText: string;
 }
 
@@ -43,7 +43,7 @@ export default class TodoListPage extends React.Component<Props, State> {
   // This method doesn't need to be defined as an arrow function class property
   // because it isn't directly referenced by `render()`
   // See: https://reactjs.org/docs/faq-functions.html#why-is-binding-necessary-at-all
-  addItem(item: TodoListItem) {
+  addItem(item: Task) {
     this.setState(state => ({
       // Expand list by appending the new item to the end of the cloned array
       // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_array_literals
