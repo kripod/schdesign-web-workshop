@@ -44,8 +44,8 @@ export default class CounterPage extends React.Component<Props, State> {
           onClick={this.decreaseCount}
         >
           -
-        </button>
-        {count}
+        </button>{' '}
+        {count}{' '}
         <button type="button" onClick={this.increaseCount}>
           +
         </button>
