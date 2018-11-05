@@ -54,12 +54,18 @@ export default class TodoListPage extends React.Component<Props, State> {
     }));
   }
 
+  removeItem(id: number) {
+    this.setState(state => ({
+      items: state.items.filter(item => item.id !== id),
+    }));
+  }
+
   render() {
     const { items, newItemText } = this.state;
 
     return (
       <Layout>
-        <h1>To-do list</h1>
+        <h2>To-do list</h2>
 
         <ul>
           {items.map(item => (
@@ -68,6 +74,9 @@ export default class TodoListPage extends React.Component<Props, State> {
               // See: https://reactjs.org/docs/lists-and-keys.html#keys
               key={item.id}
             >
+              <button type="button" onClick={() => this.removeItem(item.id)}>
+                X
+              </button>{' '}
               {item.text}
             </li>
           ))}
@@ -80,10 +89,9 @@ export default class TodoListPage extends React.Component<Props, State> {
               id="new-item-text"
               value={newItemText}
               onChange={this.handleInputChange}
-            />
+            />{' '}
+            <button type="submit">+</button>
           </label>
-
-          <button type="submit">+</button>
         </form>
       </Layout>
     );
