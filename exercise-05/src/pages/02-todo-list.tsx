@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Layout from '../components/Layout';
 import Task from '../models/Task';
 
 interface Props {}
@@ -64,7 +63,7 @@ export default class TodoListPage extends React.Component<Props, State> {
     const { items, newItemText } = this.state;
 
     return (
-      <Layout>
+      <>
         <h2>To-do list</h2>
 
         <ul>
@@ -93,7 +92,7 @@ export default class TodoListPage extends React.Component<Props, State> {
             <button type="submit">+</button>
           </label>
         </form>
-      </Layout>
+      </>
     );
   }
 }

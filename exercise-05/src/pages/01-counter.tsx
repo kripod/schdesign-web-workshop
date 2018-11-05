@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Layout from '../components/Layout';
 
 interface Props {}
 
@@ -37,7 +36,7 @@ export default class CounterPage extends React.Component<Props, State> {
     const { count } = this.state;
 
     return (
-      <Layout>
+      <>
         <button
           type="button"
           // Make sure not to call the function when passing it as an attribute
@@ -50,7 +49,7 @@ export default class CounterPage extends React.Component<Props, State> {
         <button type="button" onClick={this.increaseCount}>
           +
         </button>
-      </Layout>
+      </>
     );
   }
 }
