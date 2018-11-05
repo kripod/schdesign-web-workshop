@@ -10,6 +10,11 @@ interface State {
 }
 
 export default class TodoListPage extends React.Component<Props, State> {
+  // The type of `state` must be annotated explicitly because subclasses are
+  // allowed to have narrower properties than their base classes
+  // See:
+  // - https://github.com/Microsoft/TypeScript/issues/25785#issuecomment-406247138
+  // - https://github.com/Microsoft/TypeScript/issues/10570#issuecomment-296860943
   state: State = {
     items: [],
     newItemText: '',
@@ -35,7 +40,10 @@ export default class TodoListPage extends React.Component<Props, State> {
     }
   };
 
-  addItem = (item: TodoListItem) => {
+  // This method doesn't need to be defined as an arrow function class property
+  // because it isn't directly referenced by `render()`
+  // See: https://reactjs.org/docs/faq-functions.html#why-is-binding-necessary-at-all
+  addItem(item: TodoListItem) {
     this.setState(state => ({
       // Expand list by appending the new item to the end of the cloned array
       // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_array_literals
@@ -44,7 +52,7 @@ export default class TodoListPage extends React.Component<Props, State> {
       // Clear input field
       newItemText: '',
     }));
-  };
+  }
 
   render() {
     const { items, newItemText } = this.state;
@@ -55,7 +63,13 @@ export default class TodoListPage extends React.Component<Props, State> {
 
         <ul>
           {items.map(item => (
-            <li key={item.id}>{item.text}</li>
+            <li
+              // Mapped components must always have a locally unique `key` prop
+              // See: https://reactjs.org/docs/lists-and-keys.html#keys
+              key={item.id}
+            >
+              {item.text}
+            </li>
           ))}
         </ul>
 
