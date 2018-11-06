@@ -45,7 +45,7 @@ export default class TodoListPage extends React.Component<Props, State> {
   addItem(item: Task) {
     this.setState(state => ({
       // Expand list by appending the new item to the end of the cloned array
-      // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_array_literals
+      // See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_array_literals
       items: [...state.items, item],
 
       // Clear input field
