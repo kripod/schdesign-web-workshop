@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet';
 import { Container } from 'reactstrap';
 import Layout from '../components/Layout';
 
-const NotFoundPage = () => (
-  <Layout>
+const NotFoundPage = (props: any) => (
+  <Layout {...props}>
     <Container>
       <Helmet>
         <title>404</title>

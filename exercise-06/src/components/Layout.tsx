@@ -1,4 +1,4 @@
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, StaticQuery, withPrefix } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 import { Container, Form, Input, Nav, NavItem } from 'reactstrap';
@@ -11,10 +11,13 @@ import 'typeface-playfair-display';
 import styles from './Layout.module.css';
 
 interface Props {
+  location: {
+    pathname: string;
+  };
   children: React.ReactNode;
 }
 
-const Layout = ({ children }: Props) => (
+const Layout = ({ location, children }: Props) => (
   <div className={styles.root}>
     <StaticQuery
       query={graphql`
@@ -39,16 +42,18 @@ const Layout = ({ children }: Props) => (
 
     <Header className={styles.header}>
       <Nav className="mr-auto" navbar>
-        <NavItem>
+        {/* TODO: Normalize `location.pathname` (add trailing slash if needed) */}
+        {/* TODO: Load menu items from a YAML file */}
+        <NavItem active={location.pathname === withPrefix('/')}>
           <GatsbyNavLink to="/">Kezdőlap</GatsbyNavLink>
         </NavItem>
-        <NavItem>
+        <NavItem active={location.pathname === withPrefix('/technology/')}>
           <GatsbyNavLink to="/technology/">Technológia</GatsbyNavLink>
         </NavItem>
-        <NavItem>
+        <NavItem active={location.pathname === withPrefix('/design/')}>
           <GatsbyNavLink to="/design/">Design</GatsbyNavLink>
         </NavItem>
-        <NavItem>
+        <NavItem active={location.pathname === withPrefix('/economy/')}>
           <GatsbyNavLink to="/economy/">Gazdaság</GatsbyNavLink>
         </NavItem>
       </Nav>

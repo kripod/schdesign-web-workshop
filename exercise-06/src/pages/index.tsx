@@ -17,8 +17,8 @@ import LaptopImageSrc from './posts/erdekessegek-a-reactrol/laptops.jpg';
 
 import styles from './index.module.css';
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = (props: any) => (
+  <Layout {...props}>
     <Container>
       <Jumbotron className={`${styles.hero} text-light`}>
         <Col md={6}>
