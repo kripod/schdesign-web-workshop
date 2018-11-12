@@ -1,0 +1,4 @@
+- bitcoin.jpg: https://unsplash.com/photos/JrjhtBJ-pGU
+- hand.jpg: https://unsplash.com/photos/O6fs4ablxw8
+- laptops.jpg: https://unsplash.com/photos/SYTO3xs06fU
+- sunset.jpg: https://unsplash.com/photos/LkjruCBLg9I
