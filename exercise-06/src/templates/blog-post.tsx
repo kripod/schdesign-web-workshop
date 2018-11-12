@@ -1,5 +1,6 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
+import Helmet from 'react-helmet';
 import { Container, Jumbotron } from 'reactstrap';
 import Layout from '../components/Layout';
 
@@ -10,6 +11,10 @@ const BlogPostTemplate = ({ data, ...props }: any) => {
 
   return (
     <Layout {...props}>
+      <Helmet>
+        <title>{post.frontmatter.title}</title>
+      </Helmet>
+
       <Container>
         <Jumbotron
           className={`${styles.hero} mb-3`}
