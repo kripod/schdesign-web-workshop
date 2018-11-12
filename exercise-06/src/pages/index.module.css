@@ -1,3 +1,8 @@
 .hero {
   background: url('../images/sunset.jpg') bottom center / cover fixed;
 }
+
+.postTitleLink,
+.postTitleLink:hover {
+  color: inherit;
+}

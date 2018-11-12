@@ -1,4 +1,4 @@
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, Link, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import {
   Badge,
@@ -41,7 +41,9 @@ const IndexPage = (props: any) => (
               ) {
                 edges {
                   node {
-                    id
+                    fields {
+                      slug
+                    }
                     frontmatter {
                       title
                       category
@@ -57,11 +59,24 @@ const IndexPage = (props: any) => (
           `}
           render={data =>
             data.allMarkdownRemark.edges.map(({ node }: any) => (
-              <Col key={node.id} md={4}>
+              <Col key={node.fields.slug} md={4}>
                 <Card>
-                  <CardImg top src={node.frontmatter.featuredImage.publicURL} />
+                  <Link to={node.fields.slug}>
+                    <CardImg
+                      top
+                      src={node.frontmatter.featuredImage.publicURL}
+                    />
+                  </Link>
+
                   <CardBody>
-                    <CardTitle tag="h2">{node.frontmatter.title}</CardTitle>
+                    <CardTitle tag="h2">
+                      <Link
+                        to={node.fields.slug}
+                        className={styles.postTitleLink}
+                      >
+                        {node.frontmatter.title}
+                      </Link>
+                    </CardTitle>
                     <CardSubtitle tag="div">
                       <Badge color="primary">{node.frontmatter.category}</Badge>
                     </CardSubtitle>
