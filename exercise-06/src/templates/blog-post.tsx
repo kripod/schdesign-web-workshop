@@ -3,6 +3,8 @@ import * as React from 'react';
 import { Container, Jumbotron } from 'reactstrap';
 import Layout from '../components/Layout';
 
+import styles from './blog-post.module.css';
+
 const BlogPostTemplate = ({ data, ...props }: any) => {
   const post = data.markdownRemark;
 
@@ -10,6 +12,7 @@ const BlogPostTemplate = ({ data, ...props }: any) => {
     <Layout {...props}>
       <Container>
         <Jumbotron
+          className={styles.hero}
           style={{
             background: `url('${
               post.frontmatter.featuredImage.publicURL
