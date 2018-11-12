@@ -47,14 +47,14 @@ const Layout = ({ location, children }: Props) => (
         <NavItem active={location.pathname === withPrefix('/')}>
           <GatsbyNavLink to="/">Kezdőlap</GatsbyNavLink>
         </NavItem>
-        <NavItem active={location.pathname === withPrefix('/technology/')}>
-          <GatsbyNavLink to="/technology/">Technológia</GatsbyNavLink>
-        </NavItem>
         <NavItem active={location.pathname === withPrefix('/design/')}>
           <GatsbyNavLink to="/design/">Design</GatsbyNavLink>
         </NavItem>
         <NavItem active={location.pathname === withPrefix('/economy/')}>
           <GatsbyNavLink to="/economy/">Gazdaság</GatsbyNavLink>
+        </NavItem>
+        <NavItem active={location.pathname === withPrefix('/technology/')}>
+          <GatsbyNavLink to="/technology/">Technológia</GatsbyNavLink>
         </NavItem>
       </Nav>
 

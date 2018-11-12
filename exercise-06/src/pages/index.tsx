@@ -38,6 +38,7 @@ const IndexPage = (props: any) => (
             {
               allMarkdownRemark(
                 filter: { fileAbsolutePath: { regex: "/posts/" } }
+                sort: { fields: frontmatter___category }
               ) {
                 edges {
                   node {
