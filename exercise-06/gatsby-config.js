@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Strict Starter',
-    language: 'en',
+    title: 'NyúzoSCH',
+    language: 'hu',
   },
   plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-typescript'],
 };

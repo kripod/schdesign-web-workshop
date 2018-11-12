@@ -1,6 +1,8 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { graphql, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
+import Header from './Header';
 
 interface Props {
   children: React.ReactNode;
@@ -8,8 +10,6 @@ interface Props {
 
 const Layout = ({ children }: Props) => (
   <div>
-    {/* TODO: Add global styles */}
-
     <StaticQuery
       query={graphql`
         {
@@ -31,7 +31,7 @@ const Layout = ({ children }: Props) => (
       )}
     />
 
-    <header>{/* TODO */}</header>
+    <Header />
 
     <main>{children}</main>
 
