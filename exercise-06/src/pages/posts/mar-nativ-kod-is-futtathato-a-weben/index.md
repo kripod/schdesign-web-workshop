@@ -1,5 +1,5 @@
 ---
-title: Érdekességek a Reactről
+title: Már natív kód is futtatható a weben
 category: Technológia
 featuredImage: ./laptops.jpg
 ---
