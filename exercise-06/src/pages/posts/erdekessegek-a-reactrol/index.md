@@ -1,6 +1,7 @@
 ---
 title: Érdekességek a Reactről
 category: Technológia
+featuredImage: ./laptops.jpg
 ---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, dolores deserunt velit quidem necessitatibus quod blanditiis suscipit, nisi est rem iure id. Sunt, commodi assumenda perspiciatis voluptatibus ratione nemo nobis.

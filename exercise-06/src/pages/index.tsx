@@ -1,3 +1,4 @@
+import { graphql, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import {
   Badge,
@@ -13,7 +14,6 @@ import {
   Row,
 } from 'reactstrap';
 import Layout from '../components/Layout';
-import LaptopImageSrc from './posts/erdekessegek-a-reactrol/laptops.jpg';
 
 import styles from './index.module.css';
 
@@ -33,21 +33,45 @@ const IndexPage = (props: any) => (
       </Jumbotron>
 
       <Row>
-        <Col md={4}>
-          <Card>
-            <CardImg top src={LaptopImageSrc} alt="Laptopok" />
-            <CardBody>
-              <CardTitle tag="h2">Poszt címe</CardTitle>
-              <CardSubtitle tag="div">
-                <Badge color="primary">Technológia</Badge>
-              </CardSubtitle>
-              <CardText className="mt-3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Quaerat quam aspernatur quo quod illum deleniti!
-              </CardText>
-            </CardBody>
-          </Card>
-        </Col>
+        <StaticQuery
+          query={graphql`
+            {
+              allMarkdownRemark(
+                filter: { fileAbsolutePath: { regex: "/posts/" } }
+              ) {
+                edges {
+                  node {
+                    id
+                    frontmatter {
+                      title
+                      category
+                      featuredImage {
+                        publicURL
+                      }
+                    }
+                    excerpt
+                  }
+                }
+              }
+            }
+          `}
+          render={data =>
+            data.allMarkdownRemark.edges.map(({ node }: any) => (
+              <Col key={node.id} md={4}>
+                <Card>
+                  <CardImg top src={node.frontmatter.featuredImage.publicURL} />
+                  <CardBody>
+                    <CardTitle tag="h2">{node.frontmatter.title}</CardTitle>
+                    <CardSubtitle tag="div">
+                      <Badge color="primary">{node.frontmatter.category}</Badge>
+                    </CardSubtitle>
+                    <CardText className="mt-3">{node.excerpt}</CardText>
+                  </CardBody>
+                </Card>
+              </Col>
+            ))
+          }
+        />
       </Row>
     </Container>
   </Layout>

@@ -1,6 +1,7 @@
 ---
 title: A web már nem csak a programozóké
 category: Design
+featuredImage: ./hand.jpg
 ---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam non fugit minima culpa ipsam molestiae dicta consequuntur, at et nemo! Illo, maxime reprehenderit! Eos, in assumenda facere voluptates et impedit.
