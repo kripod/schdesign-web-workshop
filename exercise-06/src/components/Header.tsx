@@ -1,19 +1,10 @@
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, Link, StaticQuery } from 'gatsby';
 import * as React from 'react';
-import {
-  Collapse,
-  Form,
-  Input,
-  Nav,
-  Navbar,
-  NavbarBrand,
-  NavbarToggler,
-  NavItem,
-} from 'reactstrap';
-import GatsbyNavLink from './GatsbyNavLink';
+import { Collapse, Navbar, NavbarBrand, NavbarToggler } from 'reactstrap';
 
 interface Props {
   className: string;
+  children: React.ReactNode;
 }
 
 interface State {
@@ -36,7 +27,7 @@ export default class Header extends React.Component<Props, State> {
   };
 
   render() {
-    const { className } = this.props;
+    const { className, children } = this.props;
     const { isOpen } = this.state;
 
     return (
@@ -58,30 +49,15 @@ export default class Header extends React.Component<Props, State> {
             }
           `}
           render={data => (
-            <NavbarBrand href="/">{data.site.siteMetadata.title}</NavbarBrand>
+            <NavbarBrand tag={Link} to="/">
+              {data.site.siteMetadata.title}
+            </NavbarBrand>
           )}
         />
         <NavbarToggler onClick={this.toggle} />
 
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <GatsbyNavLink to="/">Kezdőlap</GatsbyNavLink>
-            </NavItem>
-            <NavItem>
-              <GatsbyNavLink to="/technology/">Technológia</GatsbyNavLink>
-            </NavItem>
-            <NavItem>
-              <GatsbyNavLink to="/design/">Design</GatsbyNavLink>
-            </NavItem>
-            <NavItem>
-              <GatsbyNavLink to="/economy/">Gazdaság</GatsbyNavLink>
-            </NavItem>
-          </Nav>
-
-          <Form inline className="my-2 my-lg-0">
-            <Input type="search" placeholder="Keresés…" />
-          </Form>
+          {children}
         </Collapse>
       </Navbar>
     );

@@ -15,7 +15,8 @@
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-helmet": "^5.2.0",
-    "reactstrap": "^6.5.0"
+    "reactstrap": "^6.5.0",
+    "typeface-playfair-display": "^0.0.54"
   },
   "devDependencies": {
     "@types/react-helmet": "^5.0.7",

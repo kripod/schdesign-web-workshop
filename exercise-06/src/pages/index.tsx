@@ -13,7 +13,7 @@ import {
   Row,
 } from 'reactstrap';
 import Layout from '../components/Layout';
-import LaptopImageSrc from '../images/laptops.jpg';
+import LaptopImageSrc from './posts/erdekessegek-a-reactrol/laptops.jpg';
 
 import styles from './index.module.css';
 
@@ -38,7 +38,7 @@ const IndexPage = () => (
             <CardImg top src={LaptopImageSrc} alt="Laptopok" />
             <CardBody>
               <CardTitle tag="h2">Poszt címe</CardTitle>
-              <CardSubtitle>
+              <CardSubtitle tag="div">
                 <Badge color="primary">Technológia</Badge>
               </CardSubtitle>
               <CardText className="mt-3">
