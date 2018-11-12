@@ -12,13 +12,19 @@ import {
 } from 'reactstrap';
 import GatsbyNavLink from './GatsbyNavLink';
 
-interface Props {}
+interface Props {
+  className: string;
+}
 
 interface State {
   isOpen: boolean;
 }
 
 export default class Header extends React.Component<Props, State> {
+  static defaultProps = {
+    className: '',
+  };
+
   state = {
     isOpen: false,
   };
@@ -30,10 +36,17 @@ export default class Header extends React.Component<Props, State> {
   };
 
   render() {
+    const { className } = this.props;
     const { isOpen } = this.state;
 
     return (
-      <Navbar sticky="top" color="light" light expand="md" className="mb-2">
+      <Navbar
+        sticky="top"
+        color="light"
+        light
+        expand="md"
+        className={`mb-3 ${className}`}
+      >
         <StaticQuery
           query={graphql`
             {

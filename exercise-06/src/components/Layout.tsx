@@ -1,15 +1,18 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { graphql, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
+import Footer from './Footer';
 import Header from './Header';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import styles from './Layout.module.css';
 
 interface Props {
   children: React.ReactNode;
 }
 
 const Layout = ({ children }: Props) => (
-  <div>
+  <div className={styles.root}>
     <StaticQuery
       query={graphql`
         {
@@ -31,11 +34,11 @@ const Layout = ({ children }: Props) => (
       )}
     />
 
-    <Header />
+    <Header className={styles.header} />
 
-    <main>{children}</main>
+    <main className={styles.main}>{children}</main>
 
-    <footer>{/* TODO */}</footer>
+    <Footer />
   </div>
 );
 
