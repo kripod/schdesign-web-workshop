@@ -12,7 +12,7 @@ const BlogPostTemplate = ({ data, ...props }: any) => {
     <Layout {...props}>
       <Container>
         <Jumbotron
-          className={styles.hero}
+          className={`${styles.hero} mb-3`}
           style={{
             background: `url('${
               post.frontmatter.featuredImage.publicURL
