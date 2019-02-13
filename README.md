@@ -1,2 +1,5 @@
 # schdesign-web-workshop
-Frontend workshop haladóknak.
+
+Az [schdesign] által tartott frontend workshopokhoz tartozó segédanyagok.
+
+[schdesign]: http://schdesign.hu/
