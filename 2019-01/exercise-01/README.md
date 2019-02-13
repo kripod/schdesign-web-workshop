@@ -74,7 +74,38 @@ A Markdown fájlokról szóló [bevezetőn](../exercise-00) keresztül megismerk
 
 ### Több hír megjelenítése
 
-TODO
+Amennyiben adatstruktúrák (pl. hírek) egy listáját szeretnénk megjeleníteni, használjuk az `ul` (unordered list, rendezetlen lista) taget. Árulkodó jel lehet, ha egymást követik ugyanolyan felépítésű komponensek.
+
+1. A `<div class="card">` kezdetű elemet ágyazzuk be `<ul>` és `</ul>` tagek közé!
+2. A kártyát tartalmazó gyökér elemet változtassuk meg `div`-ről `li`-re (list item, listaelem)!
+3. Illesszünk be további kártya komponenseket listaelemekként, megváltoztatott adatokkal!
+
+## Kártya linkek felületének kiterjesztése
+
+1. Hozzunk létre egy új [stacking contextet](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) az egyes kártya komponenseinknek:
+
+   ```css
+   .card {
+     position: relative;
+   }
+   ```
+
+2. A kártyákhoz tartozó linkek kattintófelületét terjesszük ki a kártya teljes felületére! Ezt egy [`::after`](https://developer.mozilla.org/en-US/docs/Web/CSS/::after) selector által generált úgynevezett pszeudo-elemmel tehetjük meg. A kártya gyökér elemén belül a linkhez tartozó pszeudo-elem a teljes kártyafelületet töltse ki:
+
+   ```css
+   .card .title::after {
+     content: ""; /* Új pszeudo-elem létrehozása */
+     position: absolute; /* Helye relatív a legközelebbi stacking contexthez */
+
+     /* A legközelebbi stacking context oldalaihoz tapadjon a pszeudo-elem */
+     /* Az említett stacking context a kártya gyökéreleme, emiatt */
+     /* a pszeudo-elem mindig pontosan a kártya egészét fogja fedni */
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+   }
+   ```
 
 ## Olvasmányok
 
