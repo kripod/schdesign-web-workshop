@@ -1,0 +1,73 @@
+:root {
+  --card-corner-radius: 0.5rem;
+}
+
+body {
+  background: mintcream;
+  font-family: system-ui, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.title {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+.news {
+  display: grid; /* flex */
+  padding: 0;
+  /* flex-wrap: wrap; */
+  grid-template-columns: repeat(auto-fit, minmax(33ch, 1fr));
+  gap: 2em;
+  list-style: none;
+}
+
+.card {
+  /* flex: 1 1 40ch; */
+  background: white;
+  border-radius: var(--card-corner-radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card,
+.card > img {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card > img {
+  border-radius: var(--card-corner-radius) var(--card-corner-radius) 0 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  height: 12em;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale();
+}
+
+.card:hover > img {
+  filter: none; /* unset */
+}
+
+.card .title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.card-text {
+  padding: 0 1em 1em 1em;
+}
+
+.card-text h2 {
+  margin-top: 0;
+}
