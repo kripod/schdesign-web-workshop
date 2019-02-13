@@ -107,9 +107,13 @@ Amennyiben adatstruktúrák (pl. hírek) egy listáját szeretnénk megjeleníte
    }
    ```
 
-## Olvasmányok
+## Hasznos eszközök
 
+- [Útmutató a VS Code gyorsbillentyűihez](../../notes/vscode.md)
 - [CSS `clip-path` készítő (körbevágott elemekhez)](https://bennettfeely.com/clippy/)
 - [Google Fonts](https://fonts.google.com/) → Number of styles: 10+
+
+## Olvasmányok
+
 - [Részletes leírás a Flexbox és Grid layoutokban alkalmazható elemtördelésről](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
 - [Árnyékvetés a `box-shadow` tulajdonság segítségével](https://codepen.io/sdthornton/pen/wBZdXq)
