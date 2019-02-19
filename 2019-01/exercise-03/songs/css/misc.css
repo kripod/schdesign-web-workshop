@@ -1,0 +1,48 @@
+/* Scrollbar. */
+body::-webkit-scrollbar-track,
+body::-webkit-scrollbar {
+  background-color: var(--scroll-color);
+  width: 12px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 1000px;
+}
+/**/
+
+/* Selections. */
+::-moz-selection {
+  background: var(--primary-color);
+  color: white;
+}
+::selection {
+  background: var(--primary-color);
+  color: white;
+}
+/**/
+
+/* Links with interactive underline. */
+.link {
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+.link:after {
+  content: "";
+  height: 5px;
+  background-color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  transition: width 700ms;
+  border-radius: 50px;
+}
+.link:hover:after {
+  width: 100%;
+}
+/**/
+
+.hidden {
+  display: none;
+}
