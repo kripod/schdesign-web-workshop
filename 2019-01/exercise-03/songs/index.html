@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Who's your favourite artist?</title>
+
+    <meta name="theme-color" content="#31343f" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/misc.css" />
+  </head>
+  <body>
+    <input
+      type="text"
+      name="search-bar"
+      id="search-bar"
+      class="shadow"
+      spellcheck="false"
+      placeholder="Who's your favourite artist?"
+      autofocus
+    />
+
+    <section id="card-holder">
+      <section class="card shadow" id="help">
+        <div class="image-container"></div>
+        <div class="description">
+          <h2>Discover new songs based on your favourite artist.</h2>
+        </div>
+      </section>
+    </section>
+
+    <script src="js/api/ApiWrapper.js"></script>
+    <script src="js/api/MockApiWrapper.js"></script>
+    <script src="js/DataHandler.js"></script>
+    <script src="js/SiteDrawer.js"></script>
+    <script src="js/Main.js"></script>
+    <img src="media/loading.gif" class="hidden" />
+  </body>
+</html>

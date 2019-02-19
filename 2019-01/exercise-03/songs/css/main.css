@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin-ext");
+
+:root {
+  --primary-color: #5264bf;
+  --scroll-color: #ffd6d6;
+  --text-color: #31343f;
+  --light-text-color: #7a7d8e;
+
+  --margin: 60px;
+  --smaller-margin: 15px;
+
+  --image-size: 125px;
+}
+
+* {
+  margin: 0;
+  color: var(--text-color);
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+*:focus {
+  outline: none;
+}
+
+.shadow {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.125);
+}
+
+html {
+  background: linear-gradient(90deg, #fff9e0 0, #ffd6d6 100%);
+}
+
+body {
+  background: linear-gradient(90deg, #fff9e0 0, #ffd6d6 100%);
+  padding: var(--margin) 0;
+}
+
+input[type="text"] {
+  display: block;
+  margin: auto;
+  padding: 20px 30px;
+  border-radius: 1000px;
+  border: none;
+  width: 100%;
+  max-width: 800px;
+  font: 400 1.5em "Open Sans", sans-serif;
+}
+
+#loading {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  display: block;
+}
+
+#card-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: calc(var(--margin) - var(--smaller-margin)) var(--margin) 0
+    var(--margin);
+}
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  width: 400px;
+  padding: 20px 30px;
+  margin: var(--smaller-margin);
+  background: white;
+  display: flex;
+  align-items: center;
+  transition: transform 500ms;
+  transform: translateY(1000px);
+  backface-visibility: hidden;
+}
+
+.card > .image-container {
+  width: var(--image-size);
+  height: var(--image-size);
+  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 1000px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.card > .description {
+  margin-left: 15px;
+  width: 100%;
+}
+
+h2,
+h3,
+h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.6em;
+  font-weight: 500;
+  margin-bottom: -0.05em;
+}
+
+h3 {
+  color: var(--light-text-color);
+  font-size: 1.2em;
+  margin-bottom: 1.25em;
+}
+
+h4 {
+  color: var(--light-text-color);
+  font-size: 1em;
+  text-align: center;
+}
+
+#help {
+  transform: none;
+}
+
+#help > .image-container {
+  background-image: url("../media/loupe.svg");
+  background-size: 70px 70px;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --margin: 30px;
+    --smaller-margin: 10px;
+    --image-size: 80px;
+  }
+
+  .card {
+    padding: 10px 15px;
+  }
+
+  h2 {
+    font-size: 1.25em;
+  }
+
+  h3 {
+    font-size: 0.95em;
+  }
+
+  h4 {
+    font-size: 0.85em;
+  }
+
+  input[type="text"] {
+    margin: 0 auto;
+    font-size: 1.15em;
+    width: calc(100vw - 4 * var(--smaller-margin));
+  }
+
+  #help > .image-container {
+    background-size: 50px 50px;
+  }
+}

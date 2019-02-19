@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <title>Második webtanfolyam</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600&subset=latin-ext"); /* For chrome save to PDF /w 122% zoom. */ * { font-family: Georgia, "Times New Roman", Times, serif; color: #373d49; overflow-x: hidden !important; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; } h1, h2, h3, h4, h5, h6 { font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; } h3 { font-size: 1.3em; } code > div { display: inline-block; } a { color: #00006d; border-bottom: 1px dashed #00006d77; } table, img { margin: auto; } blockquote { border-left-width: 2.5px !important; } 
+</style>
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+    </head>
+    <body>
+        <h1 id="m%C3%A1sodik-webtanfolyam">Második webtanfolyam</h1>
+<ul>
+<li><a href="#disclaimer">Disclaimer</a>
+<ul>
+<li><a href="#akkor-mi-a-c%C3%A9l">Akkor mi a cél?</a></li>
+<li><a href="#erre-minek-kell-h%C3%A1rom-alkalom">Erre minek kell három alkalom?</a></li>
+</ul>
+</li>
+<li><a href="#az-alkalom-tematik%C3%A1ja">Az alkalom tematikája</a>
+<ul>
+<li><a href="#az-alapokt%C3%B3l-a-flex-ig">Az alapoktól a flex-ig</a></li>
+<li><a href="#izgalmasabb-r%C3%A9szletek">Izgalmasabb részletek</a></li>
+<li><a href="#a-flexen-t%C3%BAl">A flexen túl</a></li>
+</ul>
+</li>
+<li><a href="#hogyan-tov%C3%A1bb">Hogyan tovább?</a>
+<ul>
+<li><a href="#h%C3%A1zifeladat">Házifeladat</a></li>
+<li><a href="#mer%C3%BClj-el-egy-t%C3%A9m%C3%A1ban">Merülj el egy témában</a></li>
+<li><a href="#izgalmas-j%C3%A1t%C3%A9kok">Izgalmas játékok</a></li>
+<li><a href="#gyere-el-a-k%C3%B6vetkez%C5%91-alkalomra">Gyere el a következő alkalomra</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="disclaimer">Disclaimer</h2>
+<p>Két óra alatt nem lehet megtanulni se designolni, se ügyesen CSS-ezni. Ez itt nem is cél.<br>
+A CSS kifejezetten egy olyan része a webfejlesztésnek, amit nagyrészt Google keresések végtelen halmazával jellemezhetünk a legjobban.</p>
+<h3 id="akkor-mi-a-c%C3%A9l">Akkor mi a cél?</h3>
+<p>Úgy lehet valamit megtanulni, ha foglalkozunk vele. Ahhoz, hogy időt szánjunk rá, motivációra van szükségünk. Itt ezt szeretném felkelteni bennetek.</p>
+<h3 id="erre-minek-kell-h%C3%A1rom-alkalom">Erre minek kell három alkalom?</h3>
+<p>A motiváció mellett pár alapismeretet is szeretnénk átadni, amivel már önállóan is képesek lesztek fejlődni.<br>
+Rossz érzés, amikor egy új dologba kezdünk és minden ijesztő, bonyolult, távoli. Én ezt az érzést szeretném csökkenteni. Meg persze pár gyakorlati tippet is adni.</p>
+<blockquote>
+<p><strong>TL;DR</strong>: Ha idáig eljutottál, ajánlom a <a href="#hogyan-tov%C3%A1bb">Hogyan tovább?</a> rész átnézését, hátha lesz benne valami, ami érdekel.</p>
+</blockquote>
+<h2 id="az-alkalom-tematik%C3%A1ja">Az alkalom tematikája</h2>
+<blockquote>
+<p>Ha más forrásból is meg szeretnéd ismerni az első lépéseket, akkor ajánlom <a href="https://www.w3schools.com/">ezt az oldalt</a>.<br>
+A kezdetekben nagyon jó lesz, az advanced témák kapcsán kicsit hiányos.</p>
+</blockquote>
+<h3 id="az-alapokt%C3%B3l-a-flex-ig">Az alapoktól a flex-ig</h3>
+<p>Kétféle nyelvet használtunk, a <strong>HTML</strong>-t és a <strong>CSS</strong>-t.</p>
+<h4 id="html">HTML</h4>
+<p>Fő részei:</p>
+<ul>
+<li><strong>&lt;html&gt;</strong><br>
+<em>Ilyet VS Codeban a <code>html:5</code> rövídítés beírásával, majd az <code>enter</code> lenyomásával készíthetünk (feltéve, hogy a fájl kiterjesztése .html).</em>
+<ul>
+<li><strong>&lt;head&gt;</strong><br>
+<em>Ide sok mindent írhatunk, egyelőre arra használtuk, hogy a css fájlainkat linkeljük a dokumentumunkhoz. Ezt VS Codeban a <code>link:css</code> rövidítés majd <code>enter</code> lenyomásával tehetjük meg. A keletkezett elem mezőit értelemszerűen töltsük ki.</em></li>
+<li><strong>&lt;/head&gt;</strong></li>
+<li><strong>&lt;body&gt;</strong><br>
+<em>Ide tudjuk írni magát a dokumentumunkat, a következőkben felsorolok pár elemet, amit használtunk.</em>
+<ul>
+<li><strong>&lt;main&gt;</strong> <em>Akár további elemeket is írhatunk ide.</em> <strong>&lt;/main&gt;</strong></li>
+<li><strong>&lt;section&gt;</strong> <em>Akár további elemeket is írhatunk ide.</em> <strong>&lt;/section&gt;</strong></li>
+<li><strong>&lt;div&gt;</strong> <em>Akár további elemeket is írhatunk ide.</em> <strong>&lt;/div&gt;</strong></li>
+<li><strong>&lt;p&gt;</strong> <em>Ide (nagyjából) csak szöveget írhatunk, más elemet nem ágyazhatunk be.</em> <strong>&lt;/p&gt;</strong></li>
+<li><strong>&lt;h1&gt;</strong> <em>Ide (nagyjából) csak szöveget írhatunk, más elemet nem ágyazhatunk be.</em> <strong>&lt;/h1&gt;</strong></li>
+</ul>
+</li>
+<li><strong>&lt;/body&gt;</strong></li>
+</ul>
+</li>
+<li><strong>&lt;/html&gt;</strong></li>
+</ul>
+<blockquote>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Ezekről részletesebben itt</a>.<br>
+<em>Egyszer ezt érdemes átpörgetni.</em></p>
+</blockquote>
+<blockquote>
+<p><a href="https://code.visualstudio.com/docs/getstarted/userinterface">Ha úgy érzed el vagy veszve a VS Codeben.</a><br>
+Illetve <a href="https://docs.emmet.io/cheat-sheet/">rövid leírás</a> a VS Codeos shortcutokhoz.</p>
+</blockquote>
+<h4 id="css">CSS</h4>
+<p>Mi a <code>.css</code> fájlokat egy <code>css</code> mappába helyeztük, ami a későbbiekben egy jó szokáshoz fog vezetni.</p>
+<p>Ez a nyelv a következőkből áll:</p>
+<ul>
+<li><strong>selector</strong>: Ezzel kijelölhetünk bizonyos elemeket (van, hogy egyet, van hogy az összeset).</li>
+<li><strong>property</strong>: Kiválaszthatunk vele bizonyos tulajdonságo(ka)t.</li>
+<li><strong>érték</strong>: A property-knek értéket adhatunk.</li>
+</ul>
+<p><em>Ez mit is jelent?</em></p>
+<h3 id="izgalmasabb-r%C3%A9szletek">Izgalmasabb részletek</h3>
+<h4 id="az-oldalunk-bodyja">Az oldalunk bodyja</h4>
+<pre><code class="language-HTML"><div><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ez-egy-id"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> Ez az én szövegem. <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>
+</span></div></code></pre>
+<blockquote>
+<p>Természetesen a <strong>&lt;head&gt;</strong>-ben linkeltük az alábbi <code>CSS</code> fájlt.</p>
+</blockquote>
+<h4 id="az-ehhez-tartoz%C3%B3-css">Az ehhez tartozó CSS</h4>
+<pre><code class="language-CSS"><div>
+<span class="hljs-selector-tag">html</span> {
+  <span class="hljs-comment">/*
+  Színátmenetet állítunk be háttérként.
+  További infók: https://www.w3schools.com/css/css3_gradients.asp
+  */</span>
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(90deg, #fff9e0 0, #ffd6d6 100%);
+}
+
+<span class="hljs-comment">/*
+A classok neve elé pontot írunk a kijelölésükhöz.
+Az id-k neve elé pedig #-et, tehát például #ez-egy-id.
+Az id selector erősebb, mint a class selector, az pedig
+erősebb a sima tag-es kijelölésnél. 
+*/</span>
+<span class="hljs-selector-class">.card</span> {
+  <span class="hljs-attribute">background</span>: white;
+
+  <span class="hljs-comment">/*
+  A chrome F12-es módjában tudjuk finomhangolni. 
+  Amúgy általában két árnyék szokott lenni, 
+  egy a direkt fénynek egy pedig az indirektnek.
+  */</span>
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">8px</span> <span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(0, 0, 0, 0.15);
+
+  <span class="hljs-comment">/* Ekvivalens ezzel: padding: 10px 20px 10px 20px; */</span>
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span> <span class="hljs-number">20px</span>;
+
+  <span class="hljs-comment">/* Ekvivalens ezzel: margin: 30px 30px 30px 30px; */</span>
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">30px</span>;
+
+  <span class="hljs-comment">/* 
+  Mennyire legyen lekerekített? 
+  Ha nagy számot adunk, akkor kör alakú lesz.
+  */</span>
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">15px</span>;
+
+  <span class="hljs-comment">/* Pont, mint MS Wordben. Lehetne még: left, right és justify.*/</span>
+  <span class="hljs-attribute">text-align</span>: center;
+
+  <span class="hljs-comment">/* Ha az első betűtípust nem találja, akkor a következővel próbálkozik. */</span>
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Open Sans"</span>, Arial, sans-serif;
+}
+
+</div></code></pre>
+<p>Ennek kapcsán hasznos lehet a <strong>box model</strong>:<br>
+<img src="https://www.w3.org/TR/CSS2/images/boxdim.png" alt="box-model"></p>
+<blockquote>
+<p><a href="https://medium.com/launch-school/https-medium-com-dembasiby-understanding-the-css-box-model-b005a82593a6">Ugyanez kifejtve részletesebben</a>.</p>
+</blockquote>
+<h4 id="m%C3%A9g-mir%C5%91l-volt-sz%C3%B3">Még miről volt szó?</h4>
+<pre><code class="language-CSS"><div><span class="hljs-comment">/* 
+Hogyan csináljunk insetes képet. 
+Erről a következő alkalmon kicsit részletesebben.
+*/</span>
+<span class="hljs-selector-class">.image-container</span> {
+
+  <span class="hljs-comment">/* Érdeklődőknek: https://css-tricks.com/box-sizing/ */</span>
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">1000px</span>;
+
+  <span class="hljs-comment">/* 
+  Nem maga mögé, hanem saját magába veti az árnyékát
+  az inset hatásásra.
+  */</span>
+  <span class="hljs-attribute">box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">2px</span> <span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(0, 0, 0, 0.33);
+
+
+  <span class="hljs-comment">/* Itt az adott css fájltól relatíven adjuk meg a kép forrását. */</span>
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'../media/picture.jpg'</span>);
+  <span class="hljs-attribute">background-position</span>: center;
+  <span class="hljs-attribute">background-size</span>: cover;
+}
+
+<span class="hljs-comment">/* Végül a lényeg. */</span>
+<span class="hljs-selector-class">.flexible</span> {
+    <span class="hljs-attribute">display</span>: flex;
+
+    <span class="hljs-comment">/* Alapértelmezetten row, ezen kívül, ami még érdekes az a column. */</span>
+    <span class="hljs-attribute">flex-direction</span>: row;
+
+    <span class="hljs-comment">/* Törjön-e új sorba? Igen. */</span>
+    <span class="hljs-attribute">flex-wrap</span>: wrap;
+
+    <span class="hljs-comment">/*
+    flex-direction: row-nál az x-irányú elhelyezést írja le.
+    flex-direction: column-nál az y-irányú elhelyezést írja le.
+    */</span>
+    <span class="hljs-attribute">justify-content</span>: space-evenly;
+
+    <span class="hljs-comment">/*
+    Pont fordítva, mint az előbb:
+    flex-direction: row-nál az y-irányú elhelyezést írja le.
+    flex-direction: column-nál az x-irányú elhelyezést írja le.
+    */</span>
+    <span class="hljs-attribute">align-items</span>: center;
+}
+</div></code></pre>
+<p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A flex-ről kicsit részletesebben</a>.</p>
+<h3 id="a-flexen-t%C3%BAl">A flexen túl</h3>
+<p>Ezen kívül természetesen egy csomó lehetőség van még a CSS-ben. Ezeket nem gond, ha nem tudjátok mind elsőre. Ha foglalkoztok vele, szép lassan a nagy részét meg fogjátok ismerni.</p>
+<p>Ha elakadtok:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">CSS referencia</a></li>
+<li><a href="http://google.com">Google</a></li>
+<li>Bátran keressetek engem is, szívesen segítek:
+<ul>
+<li><a href="https://www.facebook.com/andras.schmelczer">Facebook</a></li>
+<li><a href="mailto:andras.schmelzer@schdesign.hu">email</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="hogyan-tov%C3%A1bb">Hogyan tovább?</h2>
+<h3 id="h%C3%A1zifeladat">Házifeladat</h3>
+<p><strong>Csináljatok valamit CSS-sel.</strong><br>
+Bármit, ami érdekel, amit szépnek tartotok, vagy ami lehetőséget biztosít a gyakorlásra.</p>
+<blockquote>
+<p>Ha nincs más ötletetek, ajánlom ennek a képnek (vagy csak egy részének) a HTML + CSS-ben való megvalósítását. <img src="http://schmelczer.hu/static/hf.png" alt="szép kártyák"></p>
+</blockquote>
+<h3 id="mer%C3%BClj-el-egy-t%C3%A9m%C3%A1ban">Merülj el egy témában</h3>
+<p>Ezt úgy teheted meg, hogy a dokumentum bármelyik linkjére klikkelve kicsit utánaolvasol egy-két témának <em>(és természetesen utána ezt ki is próbálod a gyakorlatban)</em>.</p>
+<h3 id="izgalmas-j%C3%A1t%C3%A9kok">Izgalmas játékok</h3>
+<ul>
+<li><a href="http://flukeout.github.io/">Hogyan működnek a CSS selectorok játék</a>
+<blockquote>
+<p>Ez egész jó.</p>
+</blockquote>
+</li>
+<li><a href="http://flexboxfroggy.com/#hu">Hogy működik a flexbox játék</a>
+<blockquote>
+<p>Ez is tetszett.</p>
+</blockquote>
+</li>
+<li><a href="https://rupl.github.io/unfold/">Bátraknak ízelítő a CSS 3D transzformációkba</a></li>
+</ul>
+<h3 id="gyere-el-a-k%C3%B6vetkez%C5%91-alkalomra">Gyere el a következő alkalomra</h3>
+<p>Ott a webfejlesztés egy másik oldalába fogunk belenézni a <code>JavaScripten</code> keresztül.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Időpont</th>
+<th style="text-align:center">Hely</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>2019.02.21.  17:00-19:00</strong></td>
+<td style="text-align:center"><em>E-mailben küldjük.</em></td>
+</tr>
+</tbody>
+</table>
+
+    </body>
+    </html>

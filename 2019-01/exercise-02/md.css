@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600&subset=latin-ext");
+
+/* For chrome save to PDF /w 122% zoom. */
+
+* {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #373d49;
+  overflow-x: hidden !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+code > div {
+  display: inline-block;
+}
+
+a {
+  color: #00006d;
+  border-bottom: 1px dashed #00006d77;
+}
+
+table,
+img {
+  margin: auto;
+}
+
+blockquote {
+  border-left-width: 2.5px !important;
+}
