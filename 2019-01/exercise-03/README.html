@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <title>Harmadik web tanfolyam</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+    </head>
+    <body>
+        <h1 id="harmadik-web-tanfolyam">Harmadik web tanfolyam</h1>
+<h2 id="tematika">Tematika</h2>
+<ol>
+<li>VS Code fájlkezelés</li>
+<li>Ismerkedés a JSON-nel</li>
+<li>Célkitűzések
+<ol>
+<li>Weboldal bemutatás</li>
+<li>Disclaimer</li>
+</ol>
+</li>
+<li><a href="https://www.last.fm/api/show/artist.getSimilar">Last.fm</a> regisztráció</li>
+<li>Alap JS
+<ol>
+<li>let, const, műveletek</li>
+<li>function</li>
+<li>objektumok létrehozása, adattagok elérése</li>
+<li>Milyen a JS objektum?</li>
+<li>class, constructor</li>
+</ol>
+</li>
+<li>Feladatok elvégzése
+<ol>
+<li>searchFunction</li>
+<li>SiteDrawer</li>
+<li>DataHandler
+<ol>
+<li>history</li>
+<li>localStorage</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="k%C3%B3dr%C3%A9szletek">Kódrészletek</h2>
+<pre><code class="language-JS"><div>searchBar.addEventListener(<span class="hljs-string">"keydown"</span>, event =&gt; {
+    <span class="hljs-keyword">if</span> (event.key === <span class="hljs-string">"Enter"</span>)
+        searchFunction(searchBar.value);
+}
+
+localStorage.setItem(key, <span class="hljs-built_in">JSON</span>.stringify(state));
+<span class="hljs-built_in">JSON</span>.parse(localStorage.getItem(key))
+
+history.pushState(state, <span class="hljs-string">""</span>, <span class="hljs-string">""</span>);
+onpopstate = <span class="hljs-function">(<span class="hljs-params">{ state }</span>) =&gt;</span> {
+    <span class="hljs-keyword">this</span>.setState(state);
+};
+
+<span class="hljs-keyword">await</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-params">resolve</span> =&gt;</span> setTimeout(resolve, <span class="hljs-number">50</span>));
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> song <span class="hljs-keyword">of</span> songs) <span class="hljs-keyword">this</span>.addCard(song);
+
+<span class="hljs-comment">// prettier-ignore</span>
+<span class="hljs-keyword">let</span> errorCardHTML = (
+  <span class="hljs-string">`&lt;div class="card shadow"&gt;
+        &lt;h2&gt;<span class="hljs-subst">${e}</span>.&lt;/h2&gt;
+    &lt;/div&gt;`</span>
+);
+
+<span class="hljs-comment">// prettier-ignore</span>
+<span class="hljs-keyword">let</span> songCardHTML = (
+  <span class="hljs-string">`&lt;div class="card shadow link" onclick="window.open('<span class="hljs-subst">${url}</span>')"&gt;
+      &lt;div class="image-container" style="background-image: url('<span class="hljs-subst">${image}</span>')"&gt;&lt;/div&gt;
+      &lt;div class="description"&gt;
+        &lt;h2&gt;<span class="hljs-subst">${title}</span>&lt;/h2&gt;
+        &lt;h3&gt;by <span class="hljs-subst">${artist}</span>&lt;/h3&gt;
+        &lt;h4&gt;<span class="hljs-subst">${listeners}</span> listeners&lt;/h4&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;`</span>
+);
+</div></code></pre>
+
+    </body>
+    </html>
