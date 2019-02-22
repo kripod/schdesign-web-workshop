@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <title>Harmadik webtanfolyam</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600&subset=latin-ext"); /* For chrome save to PDF /w 122% zoom. */ :root { --text-color: #373d49; } * { font-family: Georgia, "Times New Roman", Times, serif; color: var(--text-color); overflow-x: hidden !important; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; } body { background: white !important; } h1, h2, h3, h4, h5, h6 { font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; } h3 { font-size: 1.3em; } code > div { display: inline; } a { color: #00006d; border-bottom: 1px dashed #00006d77; } table, img { margin: auto; } blockquote { border-left-width: 2.5px !important; } .hljs-subst, .hljs-function, .hljs-title, .hljs-params, .hljs-formula { color: var(--text-color) !important; } 
+</style>
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+    </head>
+    <body>
+        <h1 id="harmadik-webtanfolyam">Harmadik webtanfolyam</h1>
+<ul>
+<li><a href="#a-tanfolyamr%C3%B3l-r%C3%B6viden">A tanfolyamról röviden</a>
+<ul>
+<li><a href="#tematika">Tematika</a></li>
+<li><a href="#js-r%C5%91l-r%C3%B6viden">JS-ről röviden</a></li>
+<li><a href="#bevezet%C5%91-mintak%C3%B3d">Bevezető mintakód</a></li>
+<li><a href="#v%C3%A9geredm%C3%A9ny">Végeredmény</a></li>
+</ul>
+</li>
+<li><a href="#hogyan-tov%C3%A1bb">Hogyan tovább?</a>
+<ul>
+<li><a href="#p%C3%A1r-j%C3%B3-kiindul%C3%A1si-pont">Pár jó kiindulási pont</a></li>
+<li><a href="#h%C3%A1zi-feladat-opcion%C3%A1lis">Házi feladat (opcionális)</a></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>TL;DR</strong>: <a href="https://developer.mozilla.org/hu/docs/Web/JavaScript">MDN tutorial</a> + <a href="#h%C3%A1zi-feladat-opcion%C3%A1lis">házi</a> és menni fog.</p>
+</blockquote>
+<h2 id="a-tanfolyamr%C3%B3l-r%C3%B6viden">A tanfolyamról röviden</h2>
+<h3 id="tematika">Tematika</h3>
+<p>Megismerkedtünk a:</p>
+<ul>
+<li><a href="https://www.json.org/">JSON</a>-nel,</li>
+<li>a JS alapjaival:
+<ul>
+<li>let, const</li>
+<li>function, class</li>
+</ul>
+</li>
+<li>a webfejlesztéssel lényeges elemeivel.</li>
+</ul>
+<h3 id="js-r%C5%91l-r%C3%B6viden">JS-ről röviden</h3>
+<ul>
+<li>Egy magasszintű, gyengén típusos, értelmezett nyelv.</li>
+<li>A &quot;böngészőben fut&quot;.</li>
+<li>Van garbage collector.</li>
+<li>Változatos módon tudja befolyásolni az oldal állapotát.</li>
+<li>A háttérben aszinkron módon képes szerverekkel kommunikálni (<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX">AJAX</a>)</li>
+<li>A weboldal elemeit módosítani (<a href="https://developer.mozilla.org/en-US/docs/Glossary/DOM">DOM manipulation</a>)</li>
+<li>Egy csomó HTML5-ös API-val kommunikálni:
+<ul>
+<li><a href="https://developer.mozilla.org/hu/docs/Web/API/File">File</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement">HTMLMediaElement</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">LocalStorage</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas</a></li>
+<li>etc.</li>
+</ul>
+</li>
+<li>És természetesen minden olyan dologra képes, ami egy magasszintű nyelvtől elvárható.</li>
+</ul>
+<blockquote>
+<p>Kristóf JavaScript összefoglalója: <a href="https://github.com/kripod/schdesign-web-workshop/blob/master/notes/js.md">link.</a></p>
+</blockquote>
+<h3 id="bevezet%C5%91-mintak%C3%B3d">Bevezető mintakód</h3>
+<pre><code class="language-JS"><div><span class="hljs-keyword">let</span> radius = <span class="hljs-number">5</span>;
+<span class="hljs-keyword">const</span> PI = <span class="hljs-number">3.141592654</span>;
+
+<span class="hljs-keyword">let</span> area = radius ** <span class="hljs-number">2</span> * PI;  <span class="hljs-comment">// a ** b = a^b</span>
+<span class="hljs-built_in">console</span>.log(area);
+
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">circleArea</span>(<span class="hljs-params">r</span>) </span>{
+  <span class="hljs-keyword">return</span> r ** <span class="hljs-number">2</span> * PI;
+}
+
+<span class="hljs-built_in">console</span>.log(circleArea(radius));
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{
+  <span class="hljs-keyword">constructor</span>(radius) {
+    <span class="hljs-keyword">this</span>.radius = radius;
+  }
+  area() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.radius ** <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI;
+  }
+}
+
+<span class="hljs-keyword">const</span> myCircle = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">5</span>);
+<span class="hljs-built_in">console</span>.log(myCircle.area());
+</div></code></pre>
+<h3 id="v%C3%A9geredm%C3%A9ny">Végeredmény</h3>
+<p>A kész oldalt, aminek egy részét implementáltuk, <a href="https://github.com/schmelczerandras/schdesign-web-workshop/tree/master/2019-01/exercise-03/songs">ezen a linken</a> találjátok. Kipróbálni pedig a <a href="http://schmelczer.hu/songs">schmelczer.hu/songs</a> oldalon tudjátok.</p>
+<h2 id="hogyan-tov%C3%A1bb">Hogyan tovább?</h2>
+<p>A tanfolyamon megismerkedtünk az alapokkal és a nyelv által nyújtott lehetőségekkel. Ha ehhez még hozzáveszed a meglévő programozói tudásodat, egy jó forrással relatíve könnyen fog menni a JS megtanulása. Lehet, hogy eleinte nem fog könnyen menni. Viszont egyre jobb leszel.</p>
+<p>Tanuláshoz az alábbi forrásokat ajánlom. Természetesen ez nem egy kimerítő lista, most ezek jutottak eszembe.</p>
+<h3 id="p%C3%A1r-j%C3%B3-kiindul%C3%A1si-pont">Pár jó kiindulási pont</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/hu/docs/Web/JavaScript">MDN tutorial</a>.
+<blockquote>
+<p>Nem elég, hogy nagyon jó, még magyarul is van. Természetesen van angol verzió is.</p>
+</blockquote>
+</li>
+<li><a href="https://javascript.info/">Egy ígéretes weboldal</a>.
+<blockquote>
+<p>Részletesebben nem néztem bele, viszont nagyon jónak látszik.</p>
+</blockquote>
+</li>
+<li><a href="https://www.w3schools.com/js/">Egy kicsit elavult tutorial</a>.
+<blockquote>
+<p>Nem mondom, hogy jó szívvel ajánlom, de azért nem vállalhatatlan.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="h%C3%A1zi-feladat-opcion%C3%A1lis">Házi feladat (opcionális)</h3>
+<p>Készítsetek egy bármilyen (nagyon egyszerű) játékot JavaScripttel. Ehhez segítségül javaslom a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</a>-t.</p>
+<p>Aki egy kis jutalmat szeretne kapni ezért, az küldje el a <a href="mailto:hazi@schdesign.hu">hazi@schdesign.hu</a> -ra.</p>
+
+    </body>
+    </html>
